@@ -1,0 +1,13 @@
+from django.core.serializers import  deserialize
+from rest_framework import serializers
+from .models import Student
+class StudentSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Student
+        fields = '__all__'
+
+        #serializers = converts python to json
+        #json to python = deserializers
+
+
+
